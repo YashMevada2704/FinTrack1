@@ -1,26 +1,16 @@
 {% load static %}
 <!DOCTYPE html>
 
-<!--
- // Name: ekash
- // Description: Personal Finance Management Admin Dashboard App Template
- // Version: 1.0.0
- // Email : pixcelsthemes@gmail.com
- // Author: Pixcels Themes
- // URL: https://pixcelsthemes.com
- // Themeforest Profile : https://themeforest.net/user/pixcelsthemes
- // License: ISC
--->
 
 <html lang="en">
 
 
-<!-- Mirrored from ekash.pixcelsthemes.com/livepreview/ekash/signin.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Nov 2025 13:55:14 GMT -->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ekash : Personal Finance Management Admin Dashboard HTML Template</title>
+    <title>FinTrack : Personal Finance Management Admin Dashboard HTML Template</title>
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon.png' %} ">
     <!-- Custom Stylesheet -->
@@ -48,9 +38,9 @@
                                 <div class="welcome-title">
                                     <div class="mini-logo">
                                         <a href="index.html">
-                                            <img src="{% static '../../images/logo-white.html' %}" alt="" width="30" /></a>
+                                            <img src="{% static 'images/logo-white.png' %}" alt="logo" width="30"></a>
                                     </div>
-                                    <h3>Welcome to FinTrackk</h3>
+                                    <h3>Welcome to FinTrack</h3>
                                 </div>
                                 <div class="privacy-social">
                                     <div class="privacy-link"><a href="#">Have an issue with 2-factor
@@ -69,7 +59,8 @@
                         <div class="col-lg-6">
                             <div class="auth-form">
                                 <h4>Sign In</h4>
-                                <form action="https://ekash.pixcelsthemes.com/otp-phone.html">
+                                <form method="POST" action="{% url 'signin' %}">
+                                    {% csrf_token %}
                                     <div class="row">
                                         <div class="col-12 mb-3">
                                             <label class="form-label">Email</label>
@@ -105,5 +96,5 @@
 </body>
 
 
-<!-- Mirrored from ekash.pixcelsthemes.com/livepreview/ekash/signin.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Nov 2025 13:55:14 GMT -->
+
 </html>
